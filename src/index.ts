@@ -49,19 +49,19 @@ async function main() {
 
         const directionRequest = new soracom.Model.GroupConfigurationUpdateRequest();
         directionRequest.key = "direction";
-        directionRequest.value = JSON.stringify(soraletDirection);
+        directionRequest.value = soraletDirection;
 
         const enabledRequest = new soracom.Model.GroupConfigurationUpdateRequest();
         enabledRequest.key = "enabled";
-        enabledRequest.value = soraletEnabled ? "true" : "false";
+        enabledRequest.value = soraletEnabled;
 
         const useLocationRequest = new soracom.Model.GroupConfigurationUpdateRequest();
         useLocationRequest.key = "useLocation";
-        useLocationRequest.value = soraletUseLocation ? "true" : "false";
+        useLocationRequest.value = soraletUseLocation;
 
         const useMetadataRequest = new soracom.Model.GroupConfigurationUpdateRequest();
         useMetadataRequest.key = "useMetadata";
-        useMetadataRequest.value = soraletUseMetadata ? "true" : "false";
+        useMetadataRequest.value = soraletUseMetadata;
 
         const groupConfigurationUpdateRequests: soracom.Model.GroupConfigurationUpdateRequest[] = (
             [
